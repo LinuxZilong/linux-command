@@ -22,5 +22,11 @@ ifdown(参数)
 ```shell
 ifdown eth0  #禁用eth0
 ```
+> 上面的实例中，如果服务器为单网卡工作状态，使用命令会断开ssh连接，并且无法远程登录
+>
+> 单网卡工作的服务器推荐使用：
 
+```shell
+ifdown eth0 && ifup eth0  #重启eth0网卡
+```
 
